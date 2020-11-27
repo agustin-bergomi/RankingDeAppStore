@@ -29,11 +29,13 @@ public class FeedAdapter extends ArrayAdapter {
     }
 
 
+    //el adaptador debe saber cuantos items hay
     @Override
     public int getCount() {
         return applications.size();
     }
 
+    //el adaptador tiene que saber cual es el item a mostrar
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -42,6 +44,7 @@ public class FeedAdapter extends ArrayAdapter {
         TextView tvArtist = (TextView) view.findViewById(R.id.tvArtist);
         TextView tvSummary = (TextView) view.findViewById(R.id.tvSummary);
 
+        //recordar que "applications" se refiere a las aplicaciones del appstore a mostrar
         FeedEntry currentApp = applications.get(position);
 
         tvName.setText(currentApp.getName());
