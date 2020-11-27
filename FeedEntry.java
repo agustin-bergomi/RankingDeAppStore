@@ -1,5 +1,6 @@
 package com.agustinbergomi.lasmejores10apps;
 
+//esta clase representa una entidad "entrada del feed"
 public class FeedEntry {
     private String name;
     private String artist;
